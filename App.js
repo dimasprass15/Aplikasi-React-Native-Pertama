@@ -1,5 +1,5 @@
 import React from "react"
-import {Text, View, Image} from "react-native"
+import {Text, View, Image, TextInput} from "react-native"
 
 const App = () => {
   return (
@@ -9,6 +9,7 @@ const App = () => {
       <Prassetya />
       <Text>Fahima</Text>
       <Photo />
+      <TextInput style={{borderBottomWidth:1}} />
     </View>
   )
 }
