@@ -1,43 +1,30 @@
-import React, {Component} from 'react';
-import {Text, View, Image, TextInput} from 'react-native';
+import { View, Text, Image, TouchableOpacity} from 'react-native'
+import React from 'react'
 
-//functional component / arrow function
+
 const App = () => {
   return (
-    <View>
-      <View style={{width: 100, height: 100, backgroundColor: 'blue'}} />
-      <Text>Dimas</Text>
-      <Prassetya />
-      <Text>Fahima</Text>
-      <Photo />
-      <TextInput style={{borderBottomWidth: 1}} />
-      <BoxBlue />
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Image
+        source={{
+          uri: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        }}
+        style={{width: 100, height: 100, borderRadius: 50}}
+      />
+      <Text
+        style={{
+          fontWeight: 'bold',
+          marginTop: 10,
+          fontSize: 16,
+          color: '#3B3B3B',
+        }}>
+        Fahima Nur Zaina Islami Login
+      </Text>
+      <TouchableOpacity style={{backgroundColor: '#15CECE', width:250, height:40, marginTop:5, borderRadius:15}}>
+        <Text style={{fontSize:15, justifyContent:'center', alignItems:'center'}}>Silahkan Login</Text>
+      </TouchableOpacity>
     </View>
   );
-};
-
-//functional component / arrow function
-const Prassetya = () => {
-  return <Text>Prassetya Dimas</Text>;
-};
-
-//functional component / arrow function
-const Photo = () => {
-  return (
-    <Image
-      source={{
-        uri: 'https://cdn.britannica.com/68/195168-050-BBAE019A/football.jpg',
-      }}
-      style={{width: 50, height: 50}}
-    />
-  );
-};
-
-//class component
-class BoxBlue extends Component() {
-  render() {
-    return <Text>Dimas Aja lah</Text>;
-  }
 }
 
-export default App;
+export default App
